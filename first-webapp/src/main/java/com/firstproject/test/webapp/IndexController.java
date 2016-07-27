@@ -1,18 +1,24 @@
-package com.firstproject.test;
+package com.firstproject.test.webapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.beans.factory.annotation.Autowired;
+
 
 @Controller
 public class IndexController{
 
+
+    @Autowired
+    private IndexService indexService;
+
     @RequestMapping(value="/abc",method=RequestMethod.GET)
     @ResponseBody
     public String doGet(){
-        return "ohyeah";
+        return indexService.getString();
     }
 
 

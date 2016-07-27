@@ -2,6 +2,12 @@ apply plugin: 'java'
 apply plugin: 'jetty'
 
 
+dependencies{
+    compile project(':first-core')
+    compile "javax.servlet:servlet-api:2.5"
+}
+
+
 
 jettyRun{
     contextPath=""

@@ -18,7 +18,7 @@ include 'services:webservice'
 
 //rootProject.name = 'firstProject'
 
-include 'first-webapp'
-include 'first-core'
 include 'fitst-dal'
+include 'first-core'
+include 'first-webapp'
 
