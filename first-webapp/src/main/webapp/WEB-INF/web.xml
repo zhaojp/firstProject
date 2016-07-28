@@ -2,18 +2,18 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-<servlet>
-    <servlet-name>dispatcher</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 
-    <init-param>
-        <param-name>ContextConfigLocation</param-name>
-        <param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
-    </init-param>
-</servlet>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+        </init-param>
+    </servlet>
 
     <context-param>
-        <param-name>ContextConfigLocation</param-name>
+        <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/application-context.xml</param-value>
     </context-param>
 
@@ -23,17 +23,16 @@
     </context-param>
 
 
-
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
 
-    <listener>
-        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-    </listener>
-    
+    <!--<listener>-->
+        <!--<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>-->
+    <!--</listener>-->
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
